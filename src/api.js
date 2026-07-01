@@ -1,7 +1,7 @@
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
 
 export async function createChild(payload) {
-  const res = await fetch(`${API_URL}/api/childs/`, {
+  const res = await fetch(`${API_URL}api/childs/`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload),
@@ -14,7 +14,7 @@ export async function createChild(payload) {
 }
 
 export async function getChild(token) {
-  const res = await fetch(`${API_URL}/api/childs/${token}`)
+  const res = await fetch(`${API_URL}api/childs/${token}`)
   if (!res.ok) {
     if (res.status === 404) throw new Error('No record found for this token')
     throw new Error('Failed to load record')
