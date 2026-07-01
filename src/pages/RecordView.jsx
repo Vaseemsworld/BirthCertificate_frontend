@@ -36,6 +36,7 @@ export default function RecordView() {
     // using a lightweight client-side fallback if desired. For now we just
     // build the canonical record URL.
     setQrUrl(`${window.location.origin}/r/${token}`);
+    console.log("token", token);
 
     return () => {
       cancelled = true;
