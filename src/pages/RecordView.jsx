@@ -36,7 +36,6 @@ export default function RecordView() {
     // using a lightweight client-side fallback if desired. For now we just
     // build the canonical record URL.
     setQrUrl(`${window.location.origin}/r/${token}`);
-    console.log("token", token);
 
     return () => {
       cancelled = true;
@@ -126,15 +125,12 @@ export default function RecordView() {
             <span className="val">{record.signer_name}</span>
           </div>
 
-          <div className="qr-box">
+          {/* <div className="qr-box">
             <img
-              src={`${API_URL}/api/childs/${token}/qr`}
+              src={`${API_URL}api/childs/${token}/qr`}
               alt="QR code for this record"
             />
-            {/* <div style={{ fontSize: 11, color: "#555", marginTop: 6 }}>
-              Scan to view this record
-            </div> */}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

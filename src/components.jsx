@@ -60,17 +60,30 @@ export function Topbar() {
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  function handleDownload() {
+    const token = localStorage.getItem("wdr_admin_token");
+    window.location.href = token ? "/admin/dashboard" : "/admin";
+  }
   return (
     <div className="navbar-container">
       <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
       <div className={`navbar ${isOpen ? "active" : ""}`}>
-        <span>
+        <span
+          onClick={() => (window.location.href = "/")}
+          style={{ cursor: "pointer" }}
+        >
           <FaHome /> मुख्य पृष्ठ
         </span>
-        <span>
-          <FaDownload /> डाउनलोड <FaCaretDown />
+        <span
+          onClick={handleDownload}
+          style={{ cursor: "pointer" }}
+          title="Admin Panel"
+        >
+          <FaDownload /> डाउनलोड
+          <FaCaretDown />
         </span>
         <span>
           <FaBook /> प्रकाशन <FaCaretDown />
