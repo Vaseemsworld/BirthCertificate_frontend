@@ -5,6 +5,7 @@ import RegisterForm from "./pages/RegisterForm.jsx";
 import RecordView from "./pages/RecordView.jsx";
 import AdminLogin from "./pages/AdminLogin.jsx";
 import AdminDashboard from "./pages/AdminDashboard.jsx";
+import Certificate from "./pages/Certificate.jsx";
 import "./index.css";
 import Layout from "./Layout.jsx";
 
@@ -30,6 +31,14 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             }
           />
         </Route>
+        <Route
+          path="/certificate/:token"
+          element={
+            <ProtectedAdmin>
+              <Certificate />
+            </ProtectedAdmin>
+          }
+        />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

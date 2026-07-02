@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { adminListChilds, adminDownloadPdf } from "../api.js";
+import { adminListChilds } from "../api.js";
 
 function fmtDate(str) {
   if (!str) return "—";
@@ -19,7 +19,7 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
-  const [downloading, setDownloading] = useState(null);
+  // const [downloading, setDownloading] = useState(null);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("wdr_admin_token");
   const LIMIT = 50;
@@ -60,20 +60,20 @@ export default function AdminDashboard() {
     load(1);
   }, [load]);
 
-  async function handleDownload(token) {
-    setDownloading(token);
-    try {
-      await adminDownloadPdf(token, jwt);
-    } catch (err) {
-      if (err.message === "SESSION_EXPIRED") {
-        logout();
-        return;
-      }
-      alert("Failed to download PDF: " + err.message);
-    } finally {
-      setDownloading(null);
-    }
-  }
+  // async function handleDownload(token) {
+  //   setDownloading(token);
+  //   try {
+  //     await adminDownloadPdf(token, jwt);
+  //   } catch (err) {
+  //     if (err.message === "SESSION_EXPIRED") {
+  //       logout();
+  //       return;
+  //     }
+  //     alert("Failed to download PDF: " + err.message);
+  //   } finally {
+  //     setDownloading(null);
+  //   }
+  // }
 
   const filtered = records.filter(
     (r) =>
@@ -299,7 +299,7 @@ export default function AdminDashboard() {
                       {fmtDate(r.created_at)}
                     </td>
                     <td style={{ padding: "9px 10px" }}>
-                      <button
+                      {/* <button
                         className="btn"
                         style={{
                           fontSize: 12,
@@ -310,6 +310,19 @@ export default function AdminDashboard() {
                         disabled={downloading === r.token}
                       >
                         {downloading === r.token ? "⏳ ..." : "⬇ PDF"}
+                      </button> */}
+                      <button
+                        className="btn"
+                        style={{
+                          fontSize: 12,
+                          padding: "5px 12px",
+                          whiteSpace: "nowrap",
+                        }}
+                        onClick={() =>
+                          navigate(`/certificate/${r.token}`, "_blank")
+                        }
+                      >
+                        ⬇ CERTIFICATE
                       </button>
                     </td>
                   </tr>

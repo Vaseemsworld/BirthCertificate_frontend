@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -95,10 +97,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.version-logo-div {
+  border: 1px solid black;
+}
 .version-logo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
   object-fit: contain;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 .ver-tag {
   color: #ffd24d;
@@ -528,4 +535,255 @@ body {
   .footer-logo-block:nth-child(3) {
     text-align: left;
   }
+}
+
+/* certificate styling */
+
+/* ── Certificate Page Styles ── */
+/* PAGE */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .cert-page {
+    padding: 0;
+    margin: 0;
+  }
+}
+.cert-page {
+  font-family: Calibri, sans-serif;
+  background: #fff;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cert-outer {
+  width: 210mm;
+  min-height: 240mm;
+  background: #fff;
+  padding: 8px;
+}
+
+.cert-inner {
+  border: 2px solid #000;
+  min-height: 100%;
+  padding: 3px 0;
+  position: relative;
+  font-family: "Noto Sans Devanagari", Arial, sans-serif;
+  color: #000;
+}
+
+/* WATERMARK */
+.cert-inner::before {
+  content: "पहचान";
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg) skewX(-20deg);
+  font-family: "Kalam", "Noto Serif Devanagari", serif;
+  font-size: 250px;
+  color: rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+  font-style: italic;
+}
+
+/* HEADER */
+.c-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.emblem-img {
+  width: 50px;
+}
+
+.version-logo {
+  width: 70px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
+.cert-header-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cert-header-tbl tr {
+  position: relative;
+}
+.ch-qr {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  width: 100px;
+}
+.ch-qr img {
+  width: 100%;
+  height: auto;
+}
+
+.ch-mid {
+  width: 100%;
+  text-align: center;
+}
+
+/* HEADINGS */
+
+.c-formno {
+  font-size: 16px;
+  font-weight: 700;
+}
+.c-formno-hi {
+  font-size: 10px;
+}
+.c-formno-en {
+  font-size: 12px;
+}
+.c-org-hi,
+.c-org-en,
+.c-dept-hi,
+.c-dept-en,
+.c-registrar {
+  font-size: 14px;
+  margin-top: 2px;
+  font-weight: bold;
+}
+.c-org-hi,
+.c-dept-hi,
+.c-registrar {
+  font-size: 13px;
+}
+.c-title-hi,
+.c-title-en {
+  font-size: 18px;
+  font-weight: bold;
+}
+.c-title-hi {
+  margin-top: 5px;
+  font-size: 18px;
+}
+.c-legal {
+  font-size: 10px;
+  margin: 3px 160px 0;
+  line-height: 1.2;
+}
+
+/* LINES */
+
+.c-hr-bold {
+  border-top: 2px solid #000;
+}
+
+/* PARAGRAPH */
+
+.c-para-hi,
+.c-para-en {
+  padding: 2px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.c-para-en {
+  padding-bottom: 6px;
+}
+/* DETAILS TABLE */
+
+.c-fields {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-fields td {
+  width: 50%;
+  vertical-align: top;
+  padding: 3px 10px;
+}
+
+.fl {
+  font-size: 12px;
+}
+
+.fv {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* REGISTRATION */
+
+.c-reg {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.rl,
+.rd {
+  padding: 0 10px;
+}
+.rl {
+  font-size: 12px;
+}
+
+.rd {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+.c-remarks {
+  padding: 2px 10px;
+}
+
+.c-remarks,
+.date-issue {
+  font-size: 12px;
+}
+
+/* SIGNATURE */
+.c-bottom {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.c-bottom td {
+  width: 100%;
+  padding: 0px 8px;
+}
+.sig-block {
+  width: fit-content;
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+  padding: 0px 10px;
+}
+
+.sig-line {
+  padding: 2px 10px;
+  text-align: right;
+  margin-top: 12px;
+  font-size: 12px;
+}
+
+/* FOOTER */
+
+.c-footer-notes {
+  padding: 0px 10px;
+  margin-top: 5px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.c-footer-bottom {
+  padding: 0px 10px;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: bold;
 }
