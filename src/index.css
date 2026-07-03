@@ -97,13 +97,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.version-logo-div {
-  border: 1px solid black;
-}
 .version-logo {
   width: 100px;
   object-fit: contain;
-  padding: 2px;
 }
 .ver-tag {
   color: #ffd24d;
@@ -617,19 +613,57 @@ body {
     margin: 0;
   }
 }
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .cert-page {
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+  }
+  .cert-scale-box {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  .cert-outer {
+    position: static !important;
+    transform: none !important;
+    left: 0 !important;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
 .cert-page {
   font-family: Calibri, sans-serif;
   background: #fff;
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.cert-scale-box {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .cert-outer {
+  position: absolute;
+  top: 0;
   width: 210mm;
   min-height: 240mm;
   background: #fff;
   padding: 8px;
+  transform-origin: top left;
 }
 
 .cert-inner {
@@ -672,6 +706,9 @@ body {
   position: absolute;
   right: 25px;
   top: 20px;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 8px;
 }
 
 .cert-header-tbl {

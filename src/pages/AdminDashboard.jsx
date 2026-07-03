@@ -19,7 +19,6 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [search, setSearch] = useState("");
-  // const [downloading, setDownloading] = useState(null);
   const navigate = useNavigate();
   const jwt = localStorage.getItem("wdr_admin_token");
   const LIMIT = 50;
@@ -62,7 +61,10 @@ export default function AdminDashboard() {
 
   const filtered = records.filter(
     (r) =>
-      !search || r.created_at?.toLowerCase().includes(search.toLowerCase()),
+      !search ||
+      r.child_name?.toLowerCase().includes(search.toLowerCase()) ||
+      !search ||
+      r.registration_number?.includes(search),
   );
 
   const totalPages = Math.ceil(total / LIMIT);
@@ -210,7 +212,7 @@ export default function AdminDashboard() {
                     "Date of Birth",
                     "Signer Name",
                     "Registered On",
-                    "#",
+                    "PDF",
                   ].map((h) => (
                     <th
                       key={h}
@@ -284,18 +286,6 @@ export default function AdminDashboard() {
                       {fmtDate(r.created_at)}
                     </td>
                     <td style={{ padding: "9px 10px" }}>
-                      {/* <button
-                        className="btn"
-                        style={{
-                          fontSize: 12,
-                          padding: "5px 12px",
-                          whiteSpace: "nowrap",
-                        }}
-                        onClick={() => handleDownload(r.token)}
-                        disabled={downloading === r.token}
-                      >
-                        {downloading === r.token ? "⏳ ..." : "⬇ PDF"}
-                      </button> */}
                       <button
                         className="btn"
                         style={{
@@ -367,16 +357,6 @@ export default function AdminDashboard() {
 
         <div style={{ height: 32 }} />
       </div>
-
-      {/* <div className="footer">
-        <div>
-          Westeros Child Registry (WDR) — Admin Panel &nbsp;|&nbsp;
-          nic.drg.in
-        </div>
-        <div style={{ fontSize: 11, opacity: 0.7, marginTop: 4 }}>
-          Session expires after 10 hours. Logout when done.
-        </div>
-      </div> */}
     </>
   );
 }

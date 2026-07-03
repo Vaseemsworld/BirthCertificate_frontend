@@ -46,9 +46,4 @@ export async function adminListChilds(token, page = 1, limit = 50) {
   return res.json()
 }
 
-export function adminPdfUrl(token, jwtToken) {
-  // We'll trigger download via a hidden anchor with the JWT as a query param
-  // backed by a signed URL approach — for simplicity we fetch as blob
-  return { apiUrl: API_URL, token, jwtToken }
-}
 
