@@ -115,11 +115,7 @@ export default function Certificate() {
                 alt="Emblem"
                 className="emblem-img"
               />
-              <img
-                src="/bdslogo.jpg"
-                alt="Version Logo"
-                className="version-logo"
-              />
+              <img src="/bdslogo.jpg" alt="Bds Logo" className="bds-logo" />
             </div>
             <table className="cert-header-tbl">
               <tbody>

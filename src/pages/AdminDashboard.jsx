@@ -60,21 +60,6 @@ export default function AdminDashboard() {
     load(1);
   }, [load]);
 
-  // async function handleDownload(token) {
-  //   setDownloading(token);
-  //   try {
-  //     await adminDownloadPdf(token, jwt);
-  //   } catch (err) {
-  //     if (err.message === "SESSION_EXPIRED") {
-  //       logout();
-  //       return;
-  //     }
-  //     alert("Failed to download PDF: " + err.message);
-  //   } finally {
-  //     setDownloading(null);
-  //   }
-  // }
-
   const filtered = records.filter(
     (r) =>
       !search || r.created_at?.toLowerCase().includes(search.toLowerCase()),

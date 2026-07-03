@@ -52,18 +52,3 @@ export function adminPdfUrl(token, jwtToken) {
   return { apiUrl: API_URL, token, jwtToken }
 }
 
-export async function adminDownloadPdf(recordToken, jwtToken) {
-  const res = await fetch(`${API_URL}api/admin/childs/${recordToken}/pdf/`, {
-    headers: { Authorization: `Bearer ${jwtToken}` },
-  })
-  if (res.status === 401) throw new Error('SESSION_EXPIRED')
-  if (!res.ok) throw new Error('Failed to download PDF')
-  const blob = await res.blob()
-  const url = window.URL.createObjectURL(blob)
-  const a = document.createElement('a')
-  a.href = url
-  a.download = `${recordToken}.pdf`
-  a.click()
-  URL.revokeObjectURL(url)
-}
-

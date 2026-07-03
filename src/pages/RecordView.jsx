@@ -29,12 +29,7 @@ export default function RecordView() {
     }
 
     load();
-    // QR image is served directly from the backend at creation time normally;
-    // for a direct page load/share, we re-request the create endpoint's QR
-    // is not re-generated here to avoid duplicate inserts -- instead the
-    // backend exposes the same record_url which we can re-render as a QR
-    // using a lightweight client-side fallback if desired. For now we just
-    // build the canonical record URL.
+
     setQrUrl(`${window.location.origin}/r/${token}`);
 
     return () => {

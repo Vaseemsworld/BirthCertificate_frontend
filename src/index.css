@@ -104,8 +104,6 @@ body {
   width: 100px;
   object-fit: contain;
   padding: 2px;
-  border: 2px solid black;
-  border-radius: 8px;
 }
 .ver-tag {
   color: #ffd24d;
@@ -537,6 +535,71 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .topbar-left,
+  .ver-tag {
+    display: none;
+  }
+
+  /* First row */
+  .topbar-logo {
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .topbar-center {
+    order: 2;
+    flex: 0 0 auto; /* VERY IMPORTANT */
+    width: auto;
+    min-width: 0; /* Override desktop min-width:200px */
+  }
+
+  .topbar-version {
+    order: 3;
+    flex: 0 0 auto;
+  }
+
+  /* Second row */
+  .topbar-right {
+    order: 4;
+    flex-basis: 100%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .brand-banner .pehchan-logo {
+    width: 150px;
+    min-width: 0; /* Override desktop min-width:200px */
+    max-width: none;
+  }
+
+  .indian-emblem {
+    width: 50px;
+    height: 75px;
+  }
+
+  .version-logo {
+    width: 80px;
+  }
+  .org-title-hi {
+    font-size: 17px;
+  }
+  .org-title-sub1,
+  .org-title-sub2 {
+    font-size: 14px;
+  }
+}
+
 /* certificate styling */
 
 /* ── Certificate Page Styles ── */
@@ -604,7 +667,7 @@ body {
   width: 50px;
 }
 
-.version-logo {
+.bds-logo {
   width: 70px;
   position: absolute;
   right: 25px;
