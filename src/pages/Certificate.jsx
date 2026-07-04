@@ -200,9 +200,9 @@ export default function Certificate() {
                         Directorate of Economics & Statistics
                       </div>
                       <div className="c-registrar">
-                        रजिस्ट्रार - बेलाका, उमरैन, अलवर
+                        रजिस्ट्रार - डडीकर, अलवर, अलवर
                         <br />
-                        Registrar - BELAKA, UMRAIN, ALWAR
+                        Registrar - Dadhikar, Alwar, ALWAR
                       </div>
                       <div className="c-title-hi">जन्म प्रमाण पत्र</div>
                       <div className="c-title-en">BIRTH CERTIFICATE</div>
@@ -226,14 +226,14 @@ export default function Certificate() {
               <p className="c-para-hi">
                 यह प्रमाणित किया जाता है कि निम्नलिखित जानकारी जन्म के मूल
                 अभिलेख से ली गई है, जो कि (स्थानीय क्षेत्र/स्थानीय निकाय){" "}
-                <strong>बेलाका</strong> तहसील/खण्ड <strong>उमरैन</strong> ज़िला{" "}
+                <strong>डडीकर</strong> तहसील/खण्ड <strong>अलवर</strong> ज़िला{" "}
                 <strong>अलवर</strong> राज्य/संघ राज्य{" "}
                 <strong>राजस्थान, भारत</strong> का रजिस्टर है।
               </p>
               <p className="c-para-en">
                 This is to certify that the following information has been taken
                 from the original record of birth which is the register for
-                (Local area / Local body) BELAKA of Tehsil / Block UMRAIN of
+                (Local area / Local body) DADHIKAR of Tehsil / Block ALWAR of
                 District ALWAR of State / Union Territory Rajasthan, India.
               </p>
 
