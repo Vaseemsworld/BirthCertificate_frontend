@@ -18,7 +18,11 @@ const getRegDate = (dateStr) => {
   d.setDate(d.getDate() - 5);
   return d.toISOString();
 };
-
+const getGender = (gender) => {
+  if (gender == "Female") return "महिला / Female";
+  if (gender == "Male") return "पुरुष / Male";
+  if (gender == "Transgender") return "ट्रांसजेंडर / Transgender";
+};
 export default function Certificate() {
   const { token } = useParams();
   const navigate = useNavigate();
