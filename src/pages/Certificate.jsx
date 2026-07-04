@@ -249,7 +249,7 @@ export default function Certificate() {
                     </td>
                     <td>
                       <div className="fl">
-                        लिंग/Gender: <b> {record.gender} </b>
+                        लिंग/Gender: <b> {getGender(record.gender)} </b>
                       </div>
                       {/* <div className="fv">{record.gender}</div> */}
                     </td>
