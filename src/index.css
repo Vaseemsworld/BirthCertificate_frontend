@@ -600,6 +600,10 @@ body {
 
 /* ── Certificate Page Styles ── */
 /* PAGE */
+@page {
+  size: A4;
+  margin: 0;
+}
 @media print {
   body {
     margin: 0;
@@ -664,6 +668,7 @@ body {
   background: #fff;
   padding: 8px;
   transform-origin: top left;
+  box-sizing: border-box;
 }
 
 .cert-inner {
@@ -673,6 +678,7 @@ body {
   position: relative;
   font-family: "Noto Sans Devanagari", Arial, sans-serif;
   color: #000;
+  box-sizing: border-box;
 }
 
 /* WATERMARK */
