@@ -200,9 +200,9 @@ export default function Certificate() {
                         Directorate of Economics & Statistics
                       </div>
                       <div className="c-registrar">
-                        रजिस्ट्रार - डडीकर, अलवर, अलवर
+                        रजिस्ट्रार - अलवर, अलवर
                         <br />
-                        Registrar - Dadhikar, Alwar, ALWAR
+                        Registrar - Alwar, ALWAR
                       </div>
                       <div className="c-title-hi">जन्म प्रमाण पत्र</div>
                       <div className="c-title-en">BIRTH CERTIFICATE</div>
@@ -226,14 +226,14 @@ export default function Certificate() {
               <p className="c-para-hi">
                 यह प्रमाणित किया जाता है कि निम्नलिखित जानकारी जन्म के मूल
                 अभिलेख से ली गई है, जो कि (स्थानीय क्षेत्र/स्थानीय निकाय){" "}
-                <strong>डडीकर</strong> तहसील/खण्ड <strong>अलवर</strong> ज़िला{" "}
+                <strong>अलवर</strong> तहसील/खण्ड <strong>अलवर</strong> ज़िला{" "}
                 <strong>अलवर</strong> राज्य/संघ राज्य{" "}
                 <strong>राजस्थान, भारत</strong> का रजिस्टर है।
               </p>
               <p className="c-para-en">
                 This is to certify that the following information has been taken
                 from the original record of birth which is the register for
-                (Local area / Local body) DADHIKAR of Tehsil / Block ALWAR of
+                (Local area / Local body) ALWAR of Tehsil / Block ALWAR of
                 District ALWAR of State / Union Territory Rajasthan, India.
               </p>
 
@@ -328,20 +328,12 @@ export default function Certificate() {
                   </tr>
                   <tr>
                     <td>
-                      <div className="fv">
-                        {"95, बेलाका, अलवर, दिवाकरी, अलवर "}
-                      </div>
-                      <div className="fv">
-                        {"95, Belaka, Alwar, Diwakari, Alwar"}
-                      </div>
+                      <div className="fv">{"डडीकर, अलवर, अलवर "}</div>
+                      <div className="fv">{"Dadhikar, Alwar, Alwar"}</div>
                     </td>
                     <td>
-                      <div className="fv">
-                        {"95, बेलाका, अलवर, दिवाकरी, अलवर"}
-                      </div>
-                      <div className="fv">
-                        {"95, Belaka, Alwar, Diwakari, Alwar"}
-                      </div>
+                      <div className="fv">{"डडीकर, अलवर, अलवर"}</div>
+                      <div className="fv">{"Dadhikar, Alwar, Alwar"}</div>
                     </td>
                   </tr>
 
