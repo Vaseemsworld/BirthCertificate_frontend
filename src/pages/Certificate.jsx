@@ -324,15 +324,19 @@ export default function Certificate() {
                   </tr>
                   <tr>
                     <td>
-                      <div className="fv">{"मन्नाका, तुलेरा, उमरेन, अलवर"}</div>
                       <div className="fv">
-                        {"Mannaka, Toolera, Umrain, Alwar"}
+                        {"95, बेलाका, अलवर, दिवाकरी, अलवर "}
+                      </div>
+                      <div className="fv">
+                        {"95, Belaka, Alwar, Diwakari, Alwar"}
                       </div>
                     </td>
                     <td>
-                      <div className="fv">{"मन्नाका, तुलेरा, उमरेन, अलवर"}</div>
                       <div className="fv">
-                        {"Mannaka, Toolera, Umrain, Alwar"}
+                        {"95, बेलाका, अलवर, दिवाकरी, अलवर"}
+                      </div>
+                      <div className="fv">
+                        {"95, Belaka, Alwar, Diwakari, Alwar"}
                       </div>
                     </td>
                   </tr>
