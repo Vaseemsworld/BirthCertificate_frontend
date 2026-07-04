@@ -281,7 +281,7 @@ export default function Certificate() {
                     <td>
                       <div className="fl">
                         माता का आधार नंबर/Mother Aadhar No:{" "}
-                        <b>{"********9087"}</b>
+                        <b>{"********8011"}</b>
                       </div>
                       {/* <div className="fv"></div> */}
                     </td>
@@ -298,7 +298,7 @@ export default function Certificate() {
                     <td>
                       <div className="fl">
                         पिता का आधार नंबर/Father Aadhar No:{" "}
-                        <b>{"********5787"}</b>
+                        <b>{"********0441"}</b>
                       </div>
                     </td>
                   </tr>
@@ -328,12 +328,12 @@ export default function Certificate() {
                   </tr>
                   <tr>
                     <td>
-                      <div className="fv">{"डडीकर, अलवर, अलवर "}</div>
-                      <div className="fv">{"Dadhikar, Alwar, Alwar"}</div>
+                      <div className="fv">{"चिरखाना, बहादुरपुर, अलवर"}</div>
+                      <div className="fv">{"Chirkhana, Bahadurpur, Alwar"}</div>
                     </td>
                     <td>
-                      <div className="fv">{"डडीकर, अलवर, अलवर"}</div>
-                      <div className="fv">{"Dadhikar, Alwar, Alwar"}</div>
+                      <div className="fv">{"चिरखाना, बहादुरपुर, अलवर"}</div>
+                      <div className="fv">{"Chirkhana, Bahadurpur, Alwar"}</div>
                     </td>
                   </tr>
 
